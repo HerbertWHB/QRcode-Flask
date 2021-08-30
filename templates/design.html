@@ -1,0 +1,335 @@
+{% extends 'base.html'%}
+
+{% block title %}定制{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/design.css')) }}">
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/normalize.css')) }}">
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/base_sbl.css')) }}">
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/home.css')) }}">
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/buttons.css')) }}">
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/vicons-font.css')) }}">
+
+{% endblock %}
+
+{% block main %}
+ <div class="midcontent">
+      <!-- 垂直标签页 -->
+      <div class="index-page">
+        <div class="solution-more">
+          <div class="solution-more-slide">
+            <div class="container">
+              <div class="hd">
+                <ul>
+                  <li class="item-1 on">
+                    <i></i>
+                    <div class="text">
+                      <h3>文本</h3>
+                      <!-- <p>线上线下全渠道覆盖</p> -->
+                    </div>
+                  </li>
+                  <li class="item-2">
+                    <i></i>
+                    <div class="text">
+                      <h3>网址</h3>
+                      <!-- <p>满足社区电商多角色需求</p> -->
+                    </div>
+                  </li>
+                  <li class="item-3">
+                    <i></i>
+                    <div class="text">
+                      <h3>文件</h3>
+                      <!-- <p>微信分销解决方案</p> -->
+                    </div>
+                  </li>
+                  <li class="item-4">
+                    <i></i>
+                    <div class="text">
+                      <h3>图片</h3>
+                      <!-- <p>成熟的跨境交易平台</p> -->
+                    </div>
+                  </li>
+                  <li class="item-5">
+                    <i></i>
+                    <div class="text">
+                      <h3>音视频</h3>
+                      <!-- <p>本地特色购物平台</p> -->
+                    </div>
+                  </li>
+                  <li class="item-6">
+                    <i></i>
+                    <div class="text">
+                      <h3>名片</h3>
+                      <!-- <p>提升效率，降低成本</p> -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="bd">
+                <!-- 文本 -->
+                <li class="item-1">
+                  <div class="container">
+                    <div class="inner">
+                      <h3 class="title">
+                        请输入文字内容
+                      </h3>
+                      <!-- <input id="text" type="text" value="二维码生成器" /> -->
+                      <textarea id="text">二维码生成器</textarea>
+                      <!-- <button class="textConfirm">生成</button> -->
+                      <button class="textcreate button button--nuka button--round-s button--text-thick">生成</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- 网址 -->
+                <li class="item-2">
+                  <div class="container">
+                    <div class="inner">
+                      <h3 class="title">
+                        请输入网址链接
+                      </h3>
+                      <input id="turl" type="text" placeholder="https://" />
+                      <button class="textcreate button button--nuka button--round-s button--text-thick">生成</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- 文件 -->
+                <li class="item-3">
+                  <div class="container">
+                    <div class="inner">
+                      <h3 class="title">
+                        请上传文件
+                      </h3>
+                      <p class="hint1"></p>
+                      <div>
+                          <form enctype="multipart/form-data" action="uploadfile" role="form" method="post">
+                            <button class="dcmtupld" type="button">选择文件</button>
+                            <input id="file-1" type="file" class="file" name="file">
+                            <button class="dcmtcreate button button--nuka button--round-s button--text-thick" type="button">生成</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- 图片 -->
+                <li class="item-4">
+                  <div class="container">
+                    <div class="inner">
+                      <h3 class="title">
+                        请上传一张图片
+                      </h3>
+                      <p class="hint2"></p>
+                      <div>
+                          <form action="/uploadpic" role="form" method="post" enctype = "multipart/form-data">
+                              <button class="imageupld" type="button">选择图片</button>
+                              <input id="file-2" type="file" class="file" name="file">
+                              <button class="button button--nuka button--round-s button--text-thick" type="button">生成</button>
+                              <!--<input type="submit" class="imagecreate" value="生成">-->
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- 音视频 -->
+                <li class="item-5">
+                  <div class="container">
+                    <div class="inner">
+                      <h3 class="title">
+                        请上传视音频
+                      </h3>
+                      <p class="hint3"></p>
+                      <div>
+                          <form enctype="multipart/form-data" action="uploadvideo" role="form" method="post">
+                            <button class="videoupld" type="button">选择音视频</button>
+                            <input id="file-3" type="file" class="file" name="file">
+                            <button class="videocreate button button--nuka button--round-s button--text-thick" type="button">生成</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- 名片 -->
+                <li class="item-6">
+                  <div class="container">
+                    <div class="inner">
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text"/>
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri familyname">姓</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text"  />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri firstname">名</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text"  />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri occupation">职业</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri address">地址</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri telephone">手机</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text"  />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri call">电话</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text"  />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri url">网址</span>
+                        </label>
+                      </span>
+                      <span class="input input--ruri">
+                        <input class="input__field input__field--ruri" type="text" />
+                        <label class="input__label input__label--ruri">
+                          <span class="input__label-content input__label-content--ruri mail">邮箱</span>
+                        </label>
+                      </span>
+                      <form enctype="multipart/form-data">
+                        <button class="vcard button button--nuka button--round-s button--text-thick" type="button">生成</button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右边二维码生成修改区域 -->
+      <div class="modify">
+        <!-- 二维码图片 -->
+        <div id="qrcode">
+
+        </div>
+          <div id="qrcodediv">
+              <img src="{{url_for('static',filename='images/qrcode.png')}}" id="imgqrcode">
+          </div>
+        <!-- 设置样式 -->
+        <div class="setting">
+          <!-- download -->
+          <a href="" download="" id="imgdownload"><button class="download">下载</button></a>
+          <div class="setting_edit">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">基本</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">颜色</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">LOGO</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">美化器</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- 基本 -->
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="btn-group">
+                  <span class="xuanxiang">容错率</span>
+                  <button type="button" class="btn shuju">2</button>
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">0</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                  </ul>
+                </div>
+                <div class="sizeedit">
+                  <span class="xuanxiang">大小</span>
+                  <input type="text" name="" placeholder="px" class="sizeinput">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sizebtn">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="audio-setbacks">
+                    <i class="audio-this-setbacks">
+                      <span class="audio-backs-btn"></span>
+                    </i>
+                    <span class="audio-cache-setbacks">
+                    </span>
+                  </div>
+                </div>
+                <form class="shape">
+                  <span class="xuanxiang">像素形状</span>
+                  <lable class="shapeitem"><input type="radio" name="shapeitem" value="rec">矩形</lable>
+                  <lable class="shapeitem"><input type="radio" name="shapeitem" value="arc">圆形</lable>
+                </form>
+              </div>
+              <!-- 颜色 -->
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="colorpicker">
+                  <span class="xuanxiang">前景色</span>
+                  <input type="text" id="colordark" name="color" value="#000"/>
+                  <span class="xuanxiang">背景色</span>
+                  <input type="text" id="colorlight" name="color" value="#fff"/>
+                </div>
+                <div id="pickerlight"></div>
+                <div id="pickerdark"></div>
+              </div>
+              <!-- LOGO -->
+              <img id="logo">
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <label for="fileinp">
+                  <input type="button" id="logoupload" value="点我上传"><span id="logotext">请上传logo图片</span>
+                  <input type="file" id="fileinp">
+                </label>
+              </div>
+              <!-- 美化器 -->
+              <div role="tabpanel" class="tab-pane" id="settings">
+                <div class="colorpicker">
+                  <span class="xuanxiang">外框颜色</span>
+                  <input type="text" id="positionoutground" name="color" value="#000"/>
+                  <span class="xuanxiang">内框颜色</span>
+                  <input type="text" id="positioninground" name="color" value="#000"/>
+                </div>
+                <div id="pickerout"></div>
+                <div id="pickerin"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- FOOTER -->
+      <footer>
+        <hr>
+        <p>&copy; 2015329700012 &middot; <a href="#">徐曼</a> &middot; <a href="#">数媒1班</a></p>
+      </footer>
+
+    </div>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static',filename=('js/qrcode.min.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/farbtastic.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/SuperSlide.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/classie.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/ajaxfileupload.js'))}}"></script>
+<script src="{{ url_for('static',filename=('js/design.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/jquery.cookie.js'))}}"></script>
+{% endblock %}

@@ -1,0 +1,281 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+*{
+  list-style-type: none;
+}
+body {
+  padding-bottom: 40px;
+  color: #636363;
+  background-color: #e0e5df;
+}
+a{
+  color: #636363
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: white;
+}
+.navbar-brand:hover{
+  font-style: normal;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar-nav a{
+  font-size: 14px;
+}
+#navbar .active{
+  background-color: #cc99ff;
+}
+#navbar .active a{
+  color: white;
+}
+.nav a:hover{
+  color: #636363;
+  background-color: #c2c9d9
+}
+.navbar-nav li a{
+    padding-top: 23px !important;
+    padding-bottom: 22px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+
+/*midcontent
+------------------------*/
+
+.midcontent{
+  height: 600px;
+  width: 800px;
+  margin: 0 auto;
+}
+/*template*/
+.template{
+  width: 400px;
+  height: 600px;
+  padding: 50px 50px;
+  margin-top: 50px;
+  float: left;
+}
+.templates{
+  text-align: center;
+}
+.template2{
+  margin-top: 150px;
+}
+.templates img{
+  max-width: 300px;
+  max-height: 500px;
+  display: none;
+}
+.templates .show{
+  display: inline-block;
+}
+.glyphicon-chevron-left{
+  position: absolute;
+  top: 350px;
+  left: 320px;
+  font-size: 30px;
+  color: white;
+}
+.glyphicon-chevron-right{
+  position: absolute;
+  top: 350px;
+  left: 750px;
+  font-size: 30px;
+  color: white;
+}
+/*setting*/
+#imgqrcode{
+  display: none;
+}
+#finalimg,#finalpic{
+  display: none;
+}
+.setting_edit{
+  margin-top: 20px;
+}
+.setting{
+  width: 400px;
+  height: 800px;
+  margin-top: 100px;
+  float: right;
+  padding: 50px 50px;
+}
+.theme{
+  font-size: 2.3em;
+}
+.collection{
+  font-size: 16px;
+  margin-top: 30px;
+}
+.glyphicon-heart-empty{
+  color: orange;
+  padding: 0 5px 10px 0;
+}
+.setting_edit .select li{
+  width: 170px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  float: left;
+  margin-left: -40px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.setting_edit .select li a:hover{
+  text-decoration: none;
+}
+.setting_edit .select .active{
+  background-color: #cc99ff;
+  border-style: none;
+}
+.setting_edit .select .active li a{
+  color: white;
+}
+/*上传图片*/
+#upload{
+  display: none;
+}
+.uploadimg{
+  padding-top: 50px;
+}
+.decode{
+  position: absolute;
+  top: 455px;
+  left: 809px;
+  border: none;
+  font-size: 1em;
+  background-color: #c2c9d9;
+  padding: 5px 30px;
+}
+.decodeContent{
+  display: none;
+}
+.uploadimg .preview{
+  width: 80px;
+  height: 80px;
+  margin-top: 130px;
+}
+.text .preview{
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+.preview .previewimage,.previewtext{
+  display: none;
+}
+.uploadimg .uploadbtn{
+  border: none;
+  background-color: orange;
+  float:left;
+  color: white;
+  padding: 20px 51px;
+  font-size: 1em;
+}
+.download{
+  width: 100px;
+  border: none;
+  background-color: #c2c9d9;
+  color: white;
+  padding: 20px;
+  font-size: 1em;
+  float: right;
+}
+/*输入内容*/
+.text{
+  padding-top: 50px;
+}
+.inputtext{
+  border: none;
+  padding: 10px 21px;
+  font-size: 1em;
+  color: gray;
+  outline: none;
+  resize: none;
+}
+
+/*qrcode pictures*/
+#outline{
+  display: none;
+}
+#left-top{
+  display: none;
+}
+#left-bottom{
+  display: none;
+}
+#right-top{
+  display: none;
+}
+#double{
+  display: none;
+}
+#triple{
+  display: none;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .input-group{
+    width: 300px;
+    margin: 6px 50px;
+    float: left;
+  }
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

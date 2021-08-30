@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% block title %}用户
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/user.css')) }}">
+{% endblock %}
+
+{% block main %}
+    <div class="index-page">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-stacked" role="tablist">
+            <div class="userinfo">
+                <img src="{{url_for('static',filename='images/usericon.jpg')}}" alt="" class="usericon">
+                <p class="discription">{{ user.username }}</p>
+            </div>
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">文件</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">图片</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">视音频</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!--文件-->
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="search">
+                    <div class="id">
+                        <span>序号：</span><input type="text" name="">
+                    </div>
+                    <div class="user">
+                        <span>用户：</span><input type="text" name="">
+                    </div>
+                    <div class="link">
+                        <span>链接：</span><input type="text" name="">
+                    </div>
+                    <button>搜索</button>
+                </div>
+                <table class="table table-striped">
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>地址链接</th>
+                        <th>时间</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.txt</td>
+                        <td>2019-05-07</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154094.txt</td>
+                        <td>2019-05-07</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820187874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820904874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050824754874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050845154874.txt</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                </table>
+            </div>
+            <!--图片-->
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="search">
+                    <div class="id">
+                        <span>序号：</span><input type="text" name="">
+                    </div>
+                    <div class="user">
+                        <span>用户：</span><input type="text" name="">
+                    </div>
+                    <div class="link">
+                        <span>链接：</span><input type="text" name="">
+                    </div>
+                    <button>搜索</button>
+                </div>
+                <table class="table table-striped" id="blocks">
+                    <tr>
+                        <th>序号</th>
+                        <th>二维码</th>
+                        <th>用户名</th>
+                        <th>地址链接</th>
+                        <th>时间</th>
+                        <th>操作</th>
+                    </tr>
+                    {% for qrcode in qrcodes %}
+                    <tr>
+                        <td>{{qrcode.id}}</td>
+                        <td><img src="{{qrcode.content}}" alt="" class="content"></td>
+                        <td>{{qrcode.author.username}}</td>
+                        <td>{{qrcode.name}}</td>
+                        <td>{{qrcode.create_time}}</td>
+                        <td><button class="delete">删除</button><a href="{{qrcode.content}}" download="" id="imgdownload"><button class="download">下载</button></a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <div id="pagiDiv" align="right">
+                    <span id="spanFirst">First</span>
+                    <span id="spanPre">Pre</span>
+                    <span id="spanNext">Next</span>
+                    <span id="spanLast">Last</span>
+                    The <span id="spanPageNum"></span> Page/Total <span id="spanTotalPage"></span> Page
+                </div>
+            </div>
+            <!--视音频-->
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="search">
+                    <div class="id">
+                        <span>序号：</span><input type="text" name="">
+                    </div>
+                    <div class="user">
+                        <span>用户：</span><input type="text" name="">
+                    </div>
+                    <div class="link">
+                        <span>链接：</span><input type="text" name="">
+                    </div>
+                    <button>搜索</button>
+                </div>
+                <table class="table table-striped">
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>地址链接</th>
+                        <th>时间</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.mp3</td>
+                        <td>2019-05-07</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154094.mp3</td>
+                        <td>2019-05-07</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820187874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820904874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050824754874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050820154874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>徐曼</td>
+                        <td>http://kdhly.ddns.net:5000/static/uploads/pic/2019050845154874.mp3</td>
+                        <td>2019-05-08</td>
+                        <td><button class="delete">删除</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modify">
+        <img src="{{url_for('static',filename='images/content.png')}}" alt="" class="qrcode">
+        <div class="button_group">
+            <form action="/modifypic" role="form" method="post" enctype = "multipart/form-data">
+                <input type="file" id="upload" name="file">
+                <button class="update" type="button">修改</button>
+                <button class="confirm" type="button">确定</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+<script src="{{ url_for('static',filename=('js/user.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/pagination.js')) }}"></script>
+{% endblock %}

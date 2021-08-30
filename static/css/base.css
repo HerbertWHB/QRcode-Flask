@@ -1,0 +1,125 @@
+*{
+    list-style-type: none;
+}
+body{
+    padding-bottom: 40px;
+    background-color: #f7f7f7 !important;
+}
+.navbar{
+    height: 65px;
+}
+.logo{
+    margin-right: 30px;
+    margin-top: 13px;
+    width: 155px;
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+#navbar .input-group-btn .btn{
+    background-color: #ddd;
+    height: 32px;
+    color: #666;
+}
+.navbar-nav li a{
+    text-shadow: none !important;
+}
+.navbar-nav li a{
+    padding-top: 23px !important;
+    padding-bottom: 22px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+.dropdown-menu li a{
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: white;
+}
+.navbar-brand:hover{
+  font-style: normal;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+#navbar .active{
+  background-color: #cc99ff;
+}
+#navbar .active a{
+  color: white;
+}
+.nav a{
+    color: #636363;
+}
+.nav a:hover{
+  color: #636363;
+  background-color: #c2c9d9
+}
+.input-group{
+    width: 300px;
+    margin: 6px 50px;
+    float: left;
+  }
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+  .featurette-heading {
+    margin-top: 120px;
+  }
+
+
+
+.main{
+    background: #f7f7f7;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+}
+.page-title{
+    text-align: center;
+}
+.loginbtn{
+    background-color: #c2c9d9;
+    color: white;
+    width: 300px;
+    padding: 8px;
+    border-style: unset;
+    border-radius: 5px;
+}

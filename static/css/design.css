@@ -1,0 +1,564 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+*{
+  list-style-type: none;
+}
+body {
+  padding-bottom: 40px;
+  color: #636363;
+  background-color: #e0e5df;
+}
+a{
+  color: #636363
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: white;
+}
+.navbar-brand:hover{
+  font-style: normal;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar-nav a{
+  font-size: 14px;
+}
+#navbar .active{
+  background-color: #cc99ff;
+}
+#navbar .active a{
+  color: white;
+}
+.nav a:hover{
+  color: #636363;
+  background-color: #c2c9d9
+}
+.navbar-nav li a{
+    padding-top: 23px !important;
+    padding-bottom: 22px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+
+/*midcontent
+------------------------*/
+.midcontent{
+  height: 600px;
+  width: 1000px;
+  margin: 100px 0 0 350px;
+}
+#imgqrcode{
+  height: 256px;
+  width: 256px;
+}
+/*index-page
+------------------*/
+.index-page{
+  width: 450px;
+  float: left;
+}
+.bd{
+  position: relative; 
+  width: 1920px; 
+  height: 600px;
+}
+.bd .item-1{
+  position: absolute;
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: list-item;
+}
+#text{
+  width:250px;
+  height: 200px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  color: #666;
+  resize: none;
+  padding: 10px 10px;
+  font-size: 1.4em;
+}
+#turl{
+  width: 250px;
+  height: 50px;
+  margin: 20px 0;
+  resize: none;
+  color: #666;
+  padding: 10px;
+  font-size: 1.4em;
+}
+
+/*图片、文件、视音频*/
+.dcmtupld,
+.videoupld,
+.imageupld{
+  border: none;
+  background-color: orange;
+  float:left;
+  color: white;
+  padding: 10px 73px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 45px 13px;
+  font-weight: 600;
+  width: 217px;
+}
+#file-2,
+#file-3,
+#file-1{
+  display: none;
+}
+.hint{
+  margin-top: 10px;
+  padding-right: 80px;
+}
+/*名片*/
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  max-width: 230px;
+  width: calc(100% - 2em);
+  vertical-align: top;
+}
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: 400;
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+.input__field:focus {
+  outline: none;
+}
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #a3d39c;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+.input__field--ruri {
+  width: 100%;
+  font-size: 18px;
+  background: transparent;
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.input__label--ruri {
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  font-size: 1em;
+  padding: 10px 0 5px;
+  pointer-events: none;
+}
+
+.input__label--ruri::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  background: #B7C3AC;
+  left: 0;
+  top: 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.input__label-content--ruri {
+  padding: 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.input__field--ruri:focus + .input__label--ruri::after,
+.input--filled .input__label--ruri::after {
+  background: #a3d39c;
+  -webkit-transform: scale3d(1, 0.25, 1);
+  transform: scale3d(1, 0.25, 1);
+}
+
+.input__field--ruri:focus + .input__label--ruri .input__label-content--ruri,
+.input--filled .input__label--ruri .input__label-content--ruri {
+  color: #a3d39c;
+  -webkit-transform: translate3d(0, 3em, 0) scale3d(0.655, 0.655, 1);
+  transform: translate3d(0, 3em, 0) scale3d(0.655, 0.655, 1);
+}
+
+
+.bd .item-2{
+  position: absolute; 
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: none;
+}
+.bd .item-3{
+  position: absolute; 
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: none;
+}
+.bd .item-4{
+  position: absolute; 
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: none;
+}
+.imagecreate{
+  width: 217px;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  margin-left: 11px;
+  color: gray;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.bd .item-5{
+  position: absolute; 
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: none;
+}
+.bd .item-6{
+  position: absolute; 
+  width: 1920px; 
+  left: 0px; 
+  top: 0px; 
+  display: none;
+}
+.modify{
+  float: right;
+  width: 500px;
+}
+#qrcodediv{
+  width: 256px;
+  height: 256px;
+  background-color: white;
+}
+.download{
+  width: 256px;
+  background-color: #c2c9d9;
+  height: 30px;
+  outline: none;
+  border: 0;
+  color: #fff;
+}
+.setting_edit{
+  margin-top: 10px;
+}
+.nav-tabs{
+  border: none;
+}
+.nav-tabs .active a{
+  background-color: #CC99FF !important;
+  color: #fff !important;
+  border-bottom: 1px solid #8A2BE2 !important;
+
+}
+.tab-content{
+  width: 256px;
+}
+.btn-group{
+  float: left;
+}
+.btn-group .xuanxiang{
+  float: left;
+  margin: 10px 0;
+}
+#home{
+  padding: 5px 0;
+}
+#home .btn-group .btn{
+  background-color: #fff;
+}
+/*大小*/
+.sizeedit{
+  float: right;
+}
+.sizeedit .dropdown-toggle{
+  background-color: white;
+  margin-left: -5px;
+  margin-top: -3px;
+}
+.sizeinput{
+  width: 40px;
+  height: 34px;
+  border: none;
+  font-size: 14px;
+}
+/*大小调节杆*/
+.audio-setbacks{
+  height: 80px;
+  width: 6px;
+  border-radius: 3px;
+  background-color: #c2c9d9;
+  cursor: pointer;
+}
+.audio-setbacks{
+  position: relative;
+  top: 30%;
+  margin-left: 60px;
+}
+.audio-cache-setbacks,
+.audio-this-setbacks{
+  height: 100%;
+  position: absolute;
+  left: 6px;
+  top: 0;
+  border-radius: 3px;
+}
+.audio-cache-setbacks{
+  width: 0;
+  background-color: #535353;
+  z-index: 1;
+  cursor: pointer;
+  transition: width 0.6s ease;
+  -webkit-transition: width 0.6s ease;
+}
+.audio-this-setbacks{
+  background-color: #c2c9d9;
+  z-index: 2;
+}
+.audio-backs-btn{
+  position: absolute;
+  left: -9px;
+  top: -3px;
+  width: 12px;
+  height: 12px; 
+  background-color: #fafafa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*纠错*/
+.dropdown-menu{
+  margin: 2px 0 0 30px;
+  min-width: 0;
+}
+/*像素形状选择*/
+.shape{
+  margin-top: 50px;
+}
+.shapeitem{
+  background-color: white;
+  padding: 10px;
+}
+/*颜色选择器*/
+.colorpicker{
+  width: 400px;
+  padding: 5px 10px;
+}
+#colordark{
+  padding: 5px 6px;
+  width: 70px;
+  margin-right: 20px;
+}
+#colorlight{
+  padding: 5px 6px;
+  width: 70px;
+}
+#pickerlight{
+  position: absolute;
+  display: none;
+  left: 890px;
+}
+#pickerdark{
+  position: absolute;
+  display: none;
+  left: 890px;
+}
+#positionoutground{
+  padding: 5px 6px;
+  width: 70px;
+  margin-right: 20px;
+}
+#positioninground{
+  padding: 5px 6px;
+  width: 70px;
+}
+#pickerout{
+  position: absolute;
+  display: none;
+  left: 890px;
+}
+#pickerin{
+  position: absolute;
+  display: none;
+  left: 890px;
+}
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(../images/wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(../images/mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(../images/marker.png) no-repeat;
+}
+/*logo part*/
+#messages label{
+  position: relative;
+  margin: 5px 60px;
+}
+#logo{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 894px;
+  top: 226px;
+  display: none;
+}
+#fileinp{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+#logoupload{
+  margin-right: 5px;
+  border: none;
+  background-color: #c2c9d9;
+  padding: 5px;
+}
+#logotext{
+  color: gray;
+}
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .input-group{
+    width: 300px;
+    margin: 6px 50px;
+    float: left;
+  }
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

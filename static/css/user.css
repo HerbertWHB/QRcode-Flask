@@ -1,0 +1,161 @@
+/*search start*/
+.search{
+    padding: 10px 20px;
+}
+.id{
+    float: left;
+    margin-right: 10px;
+}
+.user{
+    float: left;
+    margin-right: 10px;
+}
+.link{
+    float: left;
+    margin-right: 10px;
+}
+.search button{
+    float: left;
+    border-style: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 4px 18px;
+    background-color: #9acfea;
+    color: #444;
+}
+/*search end*/
+/*table start here*/
+#profile{
+    background-color: white;
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 32px;
+}
+#blocks{
+    margin-top: 30px;
+}
+table th{
+    text-align: left;
+    height: 30px;
+    background: #deeeee;
+    padding: 5px;
+    margin: 0;
+    border: 0px;
+}
+table td{
+    text-align: left;
+    height:30px;
+    margin: 0;
+    padding: 5px;
+    border:0px
+}
+table tr:hover{
+    background: #eeeeee;
+}
+table img{
+    width: 50px;
+    height: 50px;
+}
+.span6{
+    /*width:500px;*/
+    float:inherit;
+    margin:10px;
+}
+#pagiDiv span{
+    background:#9acfea;
+    border-radius: .2em;
+    padding:5px 8px;
+    color: white;
+}
+/*table end*/
+.index-page{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 40px;
+    float: left;
+}
+.userinfo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    margin: 10px 18px;
+}
+.userinfo .discription{
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 45px;
+}
+.index-page .nav{
+    float: left !important;
+    border-right: 2px solid #CC99FF !important;
+    width: 100px;
+    padding-bottom: 240px;
+}
+.nav-stacked li{
+    text-align: center;
+    font-weight: 600;
+}
+.delete{
+    border-style: none;
+    background-color: #9acfea;
+    color: #2A2A2A;
+    font-size: small;
+}
+.download{
+    border-style: none;
+    background-color: #9acfea;
+    color: #2A2A2A;
+    font-size: small;
+    margin-left: 10px;
+}
+.nav-tabs .active a{
+    border-radius: inherit;
+    background-color: #CC99FF !important;
+    margin-left: 2px;
+}
+
+.tab-content{
+    margin-left: 135px;
+}
+
+/*right*/
+.modify{
+    float: left;
+    margin-top: 100px;
+    width: 400px;
+    height: 450px;
+    background-color: white;
+}
+.qrcode{
+    margin-left: 75px;
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+}
+.button_group{
+    margin: 114px auto;
+}
+#upload{
+    display: none !important;
+}
+.button_group .update{
+    float: left;
+    background-color: orange;
+    border-style: none;
+    width: 50%;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 10px;
+    color: white !important;
+}
+.button_group .confirm{
+    background-color: #2aabd2;
+    border-style: none;
+    width: 50%;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 10px;
+    color: white !important;
+}

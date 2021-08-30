@@ -1,0 +1,105 @@
+{% extends 'base.html'%}
+
+{% block title %}首页{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/template.css')) }}">
+
+{% endblock %}
+
+{% block main %}
+
+<div class="midcontent">
+      <canvas id="finalpic"></canvas>
+      <img src="" alt="" id="finalimg">
+      <!-- 模板选择 -->
+      <div class="template">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <div class="templates">
+          <img src="{{url_for('static',filename='images/template01.png')}}" class="template1">
+          <img src="{{url_for('static',filename='images/template02.png')}}" class="template2">
+        </div>
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      </div>
+      <!-- 用户操作区域 -->
+      <div class="setting">
+        <img src="{{url_for('static',filename='images/outline.png')}}" id="outline">
+        <img src="{{url_for('static',filename='images/left-top.png')}}" id="left-top">
+        <img src="{{url_for('static',filename='images/left-bottom.png')}}" id="left-bottom">
+        <img src="{{url_for('static',filename='images/right-top.png')}}" id="right-top">
+        <div id="qrcode">
+
+        </div>
+        <img src="{{url_for('static',filename='images/qrcode.png')}}" id="imgqrcode">
+
+        <h1 class="theme">我比你萌系列</h1>
+          <h5>作者：曼曼没有感觉</h5>
+        <div class="collection">
+          <span class="glyphicon glyphicon-heart-empty"></span>收藏
+        </div>
+        <div class="setting_edit">
+            <!-- Nav tabs -->
+
+                <ul class="select" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">上传图片</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">输入网址或文字</a></li>
+                </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- 上传图片 -->
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="uploadimg">
+                    <input type="file" name="" id="upload">
+                    <button class="uploadbtn" type="button">上传二维码图片</button>
+                    <p class="decodeContent"></p>
+                    <button class="decode">已上传</button>
+                    <a href="" download="" id="qrcodedownload"><button class="download" type="button" id="qrcodedownloadbtn">下载生成</button></a>
+                     <!--预览图-->
+                    <div class="preview">
+                        <img src="" alt="" class="previewimage">
+                    </div>
+                </div>
+              </div>
+              <!-- 输入网址或文字 -->
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="text">
+                  <textarea class="inputtext" maxlength="12" placeholder="请输入文字或链接，不超过12个字"></textarea>
+                    <a href="" download="" id="textdownload"><button class="download" type="button" id="textdownloadbtn">下载生成</button></a>
+                     <!--预览图-->
+                    <!--<div class="preview">-->
+                        <!--<img src="" alt="" class="previewtext">-->
+                    <!--</div>-->
+                </div>
+              </div>
+            </div>
+            <!--预览图-->
+            <!--<div class="preview">-->
+                <!--<img src="" alt="" class="previewimage">-->
+            <!--</div>-->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- FOOTER -->
+      <footer>
+        <hr>
+        <p>&copy; 2015329700012 &middot; <a href="#">徐曼</a> &middot; <a href="#">数媒1班</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static',filename=('js/template.js')) }}"></script>
+<script src="{{ url_for('static',filename=('js/reqrcode.js')) }}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename=('js/qrcode_art.min.js')) }}"></script>
+{% endblock %}

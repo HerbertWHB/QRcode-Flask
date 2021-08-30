@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %}用户
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/readme.css')) }}">
+{% endblock %}
+
+{% block main %}
+<div class="content">
+    <a id="summary"><h2 class="theme">关于</h2></a>
+    <div class="summary">
+        	<div class="title_group">
+        		<img src="{{ url_for('static',filename=('images/whtitle01.jpg')) }}">
+        		<p>文化简介</p>
+        	</div>
+
+        <div class="content">
+        	<div class="text">
+        		<p>条形码信息识别技术是由一组按一定编码规则排列的条、空符号，用以表示一定的字符、数字及符号组成的信息技术。一维码是码条和空白条的组合，制作简单，不能表示汉字和图像信息。</p>
+        		<p>于是产生了二维码，二维码是在二维空间上按某种规律排列几何图形。二维码分为行排式二维码和矩阵式二维码，利用计算机内部0、1比特流概念，出现方点、圆点或其他形状点的表示二进制“1”，不出现点表示“0”，并且在水平和垂直方向均可存储信息。</p>
+        		<p>QR码是一种二维符号，由丰田子公司Denso Wave在1994年发明，是二维条形码中最受欢迎的样式之一。QR二维码具有小输出尺寸、汉字和假名能力、脏和破损抵抗力、360度可读、结构性扩展等优点。主要应用于信息获取、产品溯源、电子票务、支付等领域</p>
+        	</div>
+
+        <a id="use"><img src="{{ url_for('static',filename=('images/wh02.jpg')) }}"> </a>
+        </div>
+    </div>
+    <div class="use">
+        	<div class="title_group">
+        		<img src="{{ url_for('static',filename=('images/sytitle01.jpg')) }}">
+        		<p>使用方法</p>
+        	</div>
+        <div class="content">
+        	<div class="shouye">
+        		<img src="{{ url_for('static',filename=('images/index.jpg')) }}">
+        		<p>1区进行登录注册哦
+        			<br>
+        			2区进行模板分类筛选
+        		</p>
+        	</div>
+        	<div class="template">
+        		<p>点击任一模板进入模板页哦
+        			<br>
+        			1区进行模板样式选择
+        			<br>
+        			2区可以上传已有的黑白二维码或者输入文字内容，一键生成选中的二维码样式
+        		</p>
+        		<img src="{{ url_for('static',filename=('images/template2.jpg')) }}">
+        	</div>
+        	<div class="dingzhi">
+        		<img src="{{ url_for('static',filename=('images/design.jpg')) }}">
+        		<p>1区中选择二维码内容的种类，其中文件、图片、音视频生成的是活码
+        			<br>
+        			2区输入内容或上传文件
+        			<br>
+        			3区中可以修改二维码的样式
+        			<br>
+        			4区显示生成的二维码图片，你可以直接下载喔
+        		</p>
+        	</div>
+        	<div class="user">
+        		<p>1区中显示用户已经下载的活码
+        			<br>
+        			2区中显示活码的详情
+        			<br>
+        			3区中点击修改按钮，上传新的内容
+        			<br>
+        			修改完后记得刷新哦
+        		</p>
+
+				<a id="help"><img src="{{ url_for('static',filename=('images/user.jpg')) }}"></a>
+        	</div>
+        </div>
+    </div>
+    <div class="help">
+    	<div class="title_group">
+        	<img src="{{ url_for('static',filename=('images/bztitle01.jpg')) }}">
+        	<p>帮助</p>
+        </div>
+        <div class="content">
+        	<img src="{{ url_for('static',filename=('images/bz02.jpg')) }}">
+        	<p><strong>什么是活码呢</strong>
+        		<br>
+        		对一个分配的短网址进行编码生成二维码。生成后可以随时修改内容，二维码图案不变，可跟踪扫描统计，支持存储大量文字、图片、文件、音视、视频等内容，同时图案简单易扫。
+        	</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<!--<script src="{{ url_for('static',filename=('js/user.js')) }}"></script>-->
+<script>
+    $('.dropdown-toggle').addClass('active');
+</script>
+{% endblock %}
