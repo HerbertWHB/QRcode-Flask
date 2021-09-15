@@ -12,3 +12,24 @@
 
 （4）二维码管理：将注册的用户信息保存在数据库中，用户可以对其已经创建好的二维码进行增删改查、保存下载等操作，并且可以点击查看任意二维码详情。
 
+The purpose is to develop a set of online generation system for two-dimensional code customization based on Html5 technology, Flask framework and image processing technology.
+
+
+
+The main functional objectives of the system include: two-dimensional code generation, live code production, personalized template customization and two-dimensional code management and other two-dimensional code technology research, online user interaction mode research.
+
+
+
+(1) Two-dimensional code generation: through two-dimensional code generation technology directly generate ordinary black and white two-dimensional code on the Web page. The form of two-dimensional code reconstituted graphics mainly includes logo nesting and graphics covering, replacement and reconstituted. Users can select simple graphic styles and colors on the Web side to generate simple modified TWO-DIMENSIONAL code styles. And the two-dimensional code and the graph are superimposed, dissolved, replaced and other operations, so that the original simple two-dimensional code style presents a richer shape.
+
+
+
+(2) Production of live code: when users upload files, pictures or audio and video on the Web, the system uploads the content to the server and codes the returned address link into two-dimensional code. Users scan the QR code to get the content. When the user wants to change the content of the TWO-DIMENSIONAL code, it can be updated in real time on the Web while keeping the shape of the two-dimensional code unchanged.
+
+
+
+(3) personalized template customization: system library mediator entities have been generated qr code templates for users to choose, these templates to qr code generation technique combined with image processing technology, using some algorithm of migration image style, style in the template can be quickly migrated to qr code, the generation and qr code template style is consistent. Users can generate qr codes that meet their needs with one click.
+
+
+
+(4) TWO-DIMENSIONAL code management: the registered user information saved in the database, users can have created a good TWO-DIMENSIONAL code to add, delete, change, save, download and other operations, and can click to view any two-dimensional code details.
